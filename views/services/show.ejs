@@ -1,0 +1,111 @@
+<% layout("/layout/boilerplate.ejs") %>
+<div class="section-about">
+  
+    <div class="container">
+      
+      <div class="section-common-heading">About <%=service.title%></div>
+      <div class="section-common-subheading-show"> Our commitment to excellence, innovation, and client success sets us apart.
+     </div>
+      <div class="icon">
+        <i class="<%=service.icon[0] %> <%=service.icon[1]%>"></i>
+      </div>
+      <h3 class="section-common--title"><%= service.title %></h3>
+      <p><%= service.description %></p>
+      <br>
+      <p>Duration : <b><%= service.duration %></b></p>
+      <br>
+      <% for(let feature of service.features) { %>
+              
+        <li><%= feature %></li>
+      
+         <br>
+        <% } %>
+      <p>Cost : <b><%= service.price.toLocaleString('en-IN') %></b></p>
+      <br>
+      <p>Created At : <%=service.createdAt%></p>
+      <br>
+      <div class="hero-btn">
+        <a href="/contact" class="btn btn-white">Contact Us</a>
+      </div>
+      <br>
+      
+    </div>
+
+    <section class="section-about">
+      <div class="container ">
+        <div class="section-common-heading">About Kushwaha IT Services</div>
+        <div class="section-common-subheadoing"> Our commitment to excellence, innovation, and client success sets us apart.
+       </div>
+      </div>
+
+      <div class="container grid grid-three--cols">
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/research.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Research</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/design.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Design</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/Coding.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Development</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/research.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Research</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/design.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Design</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+
+        <div class="about-div">
+          <div class="icon">
+            <img src="/images/Coding.png" alt="research image" />
+          </div>
+          <h3 class="section-common--title">Development</h3>
+          <p>Our commitment to excellence, innovation, and client success sets us apart.</p>
+        </div>
+      </div>
+      
+    </section>
+
+
+</div>
+
+<div class="section-contact-homepage" id="section-contact-homepage0">
+  <div class="container grid grid-two--cols">
+    <div class="contact-content">
+      <h2 class="contact-title">Let's revolutionize the way you study</h2>
+      <p>Join our free bootcamps to know us better</p>
+      <div class="btn">
+        <a href="/contact">
+          start now <i class="fa-solid fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-image">
+        <img src="/images/main.png" alt="a guy doing html coding"/>
+    </div>
+  </div>
+</div>

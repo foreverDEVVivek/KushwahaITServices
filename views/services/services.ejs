@@ -1,0 +1,110 @@
+<% layout("/layout/boilerplate.ejs") %>
+<link rel="stylesheet" href="/css/services.css">
+<!-- ========== Start MAIN SECTION ========== -->
+   <% if(message.length) { %>
+       <h1 class="flash-message"><%= message %></h1>
+  <% } %>
+<main>
+    <div class="section-hero">
+      <div class="container grid grid-two--cols">
+        <div class="section-hero--content">
+          <p class="hero-subheading">EMPOWERING LIFELONG JOURNEY</p>
+          <h1 class="hero-heading">
+            Limited Time Offer! 50% OFF on Website & Apps! 
+          </h1>
+          <p class="hero-para">
+            Upgrade your Website & Apps with our best-developer. Don’t miss out on this exclusive deal:
+            <br>
+            ✅ 50% OFF on all purchases
+            <br>
+            ✅ Free Shipping on orders over [amount]<br>
+            ✅ Bonus Gift with every purchase
+            <br>
+            <br>
+            Hurry, offer ends <b>31-Dec-2024</b>
+          </p>
+          <div class="hero-btn">
+            <a href="services.html" class="btn btn-white">Buy Now!</a>
+          </div>
+        </div>
+        <div class="section-hero--image">
+          <figure>
+            <img
+              src="/images/code.png"
+              alt="a 3d character doing coding stuff "
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-shape-divider-bottom-1704276160">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+      </svg>
+  </div>
+  </main>
+  <!-- ========== End MAIN SECTION ========== -->
+
+      <!-- ========== Start services Section ========== -->
+      <div class="section-common-testimonial-heading section-common-heading">Testimonials</div>
+      <div class="section-common-subheading section-common-testimonial-subheading">Successfully Delivered Services to Clients</div>
+     <section class="section-testimonial">
+      <div class="testimonial">
+        <div class="shadow"></div>
+        <span class="top border"></span>
+        <h1>Excellent Services...</h1>
+        <p>Working with Kushwaha IT Services was a game-changer for our business. Their team's dedication, expertise, and innovative approach brought our vision to life with outstanding results. From initial research to final development, they kept us involved, informed, and inspired every step of the way. We highly recommend Kushwaha IT Services for anyone seeking a reliable partner who truly understands the essence of collaboration and delivering value.</p>
+        <p>As well as took less time as compared to others, Nice Guy ever seen.</p>
+        <p class="source">&mdash; KRISH JOHN</p>
+        <span class="bottom border"></span>
+      </div>
+      <div >
+      </div>
+      
+     </section>
+
+
+      <section class="section-course">
+        <div class="container ">
+          <div class="section-common-heading">Explore our Services</div>
+          <div class="section-common-subheading"> Discover a variety of services across different platform.
+         </div>
+         
+        </div>
+
+        <div class="container grid grid-four--cols">
+          <% for(let service of allServices) { %>
+            <div class="course-div">
+              <div class="icon">
+                <i class="<%=service.icon[0]%> <%=service.icon[1]%> "></i>
+              </div>
+              <h3 class="section-common--title"><%= service.title %></h3>
+              <p><%= service.description %></p>
+              <br>
+              <h2 class="section-common--title">Features are : </h2>
+              <br>
+              <% for(let feature of service.features) { %>
+              
+                <li><%= feature %></li>
+              
+                 <br>
+                <% } %>
+              <p>Duration : <b><%= service.duration %></b></p>
+              <br>
+              <p>Cost : <b><%= service.price.toLocaleString('en-IN') %></b></p>
+              <br>
+              <div class="hero-btn hero-btn-services">
+                <a href="/services/<%=service._id %>" class="btn btn-white">Show More >></a>
+              </div>
+            </div>
+          <%}%>
+        </div>
+      </section>
+      
+      <!-- ========== End services Section ========== -->
+
+      </section>
+  
